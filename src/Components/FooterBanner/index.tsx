@@ -2,6 +2,7 @@ import React from "react";
 
 import { FooterArr, FooterItem } from "../../Const";
 import "./index.scss";
+import { Link, Outlet } from "react-router-dom";
 
 const FooterBanner = (props: {
   setActive: (arg0: string) => void;
@@ -25,8 +26,10 @@ const FooterBanner = (props: {
               BannerClick(item.id);
             }}
           >
-            <div className="footerBannerItemIcon"> {item.icon ?? "1"}</div>
-            <div className="footerBannerItemName">{item.name}</div>
+            <Link to={item.id}>
+              <div className="footerBannerItemIcon"> {item.icon ?? "1"}</div>
+              <div className="footerBannerItemName">{item.name}</div>
+            </Link>
           </div>
         );
       })}

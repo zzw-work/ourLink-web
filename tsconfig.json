@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "jsx": "react",
-    "target": "es5",                       // 指定编译目标的ECMAScript版本
+    "target": "ES6",                       // 指定编译目标的ECMAScript版本
     "module": "commonjs",                  // 指定生成的模块系统
     "strict": true,                        // 启用所有严格类型检查选项
     "esModuleInterop": true,               // 启用ES模块互操作

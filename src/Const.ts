@@ -24,4 +24,4 @@ export const FooterArr: FooterItem[] = [{
 },{
     name: '邮箱',
     id: 'MailBox'
-}]
+    }]
