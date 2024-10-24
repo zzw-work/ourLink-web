@@ -1,32 +1,31 @@
 .footerBanner {
+  display: flex;
+  justify-content: space-evenly;
+  height: 44px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid $theme_border_color;
+
+  .footerBannerItem,
+  .footerBannerItemNameActive {
+    width: 60px;
     display: flex;
-    justify-content: space-evenly;
-    height: 44px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid $theme_border_color;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    .footerBannerItem,
-    .footerBannerItemNameActive {
-        width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        .footerBannerItemName,
-        .footerBannerItemIcon {
-            font-size: 14px;
-            color: #11111122;
-        }
+    .footerBannerItemName,
+    .footerBannerItemIcon {
+      font-size: 12px;
+      color: $texticon_color;
     }
+  }
 
-    .footerBannerItemNameActive {
-
-        .footerBannerItemName,
-        .footerBannerItemIcon {
-            color: $theme_color;
-        }
+  .footerBannerItemNameActive {
+    .footerBannerItemName,
+    .footerBannerItemIcon {
+      color: $active_texticon_color;
     }
+  }
 }

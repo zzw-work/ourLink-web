@@ -62,7 +62,14 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type="primary" htmlType="submit" style={{ width: 300 }}>
+          <Button
+            htmlType="submit"
+            type="primary"
+            danger
+            style={{
+              width: 300,
+            }}
+          >
             登录
           </Button>
         </Form.Item>

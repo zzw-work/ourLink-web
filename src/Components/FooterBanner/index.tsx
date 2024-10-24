@@ -2,15 +2,10 @@ import React from "react";
 
 import { FooterArr, FooterItem } from "../../Const";
 import "./index.scss";
-import { Link, Outlet } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const FooterBanner = (props: {
-  setActive: (arg0: string) => void;
-  active: string;
-}) => {
-  const BannerClick = (id: string) => {
-    props.setActive(id);
-  };
+const FooterBanner = () => {
+  const location = useLocation();
   return (
     <div className="footerBanner">
       {FooterArr.map((item: FooterItem) => {
@@ -18,15 +13,12 @@ const FooterBanner = (props: {
           <div
             key={item.id}
             className={
-              props.active === item.id
+              location.pathname === item.id
                 ? "footerBannerItemNameActive"
                 : "footerBannerItem"
             }
-            onClick={() => {
-              BannerClick(item.id);
-            }}
           >
-            <Link to={item.id}>
+            <Link to={item.id} style={{ textDecoration: "none" }}>
               <div className="footerBannerItemIcon"> {item.icon ?? "1"}</div>
               <div className="footerBannerItemName">{item.name}</div>
             </Link>
